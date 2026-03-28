@@ -12,7 +12,8 @@ export default function Home() {
   useEffect(() => {
     const fetchTranslations = async () => {
       try {
-        const response = await axios.get(`/langs/${language}.json`);
+        const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+        const response = await axios.get(`${basePath}/langs/${language}.json`);
         setTranslations(response.data);
       } catch (err) {
         console.error("Error loading translations:", err);

@@ -1,0 +1,19 @@
+{
+  "title": "Kalkulator Titik Dev Points",
+  "inputPlaceholder": "Masukkan nama pengguna GitHub",
+  "calculateButton": "Hitung",
+  "userInfo": "Info Pengguna GitHub",
+  "username": "Nama pengguna",
+  "accountCreated": "Akun dibuat",
+  "publicRepos": "Repos Publik",
+  "followers": "Followers",
+  "following": "Mengikuti",
+  "totalCommits": "Total Komit (90 hari terakhir)",
+  "totalStars": "Total Bintang",
+  "devPoints": "Titik Dev",
+  "accountAge": "Jaman Akun",
+  "publicCommits": "Public Commons",
+  "originalRepos": "Repos Asli",
+  "stars": "Bintang",
+  "error": "Kesalahan mengambil Dev Points. Tolong coba lagi."
+}

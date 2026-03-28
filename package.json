@@ -1,0 +1,17 @@
+{
+  "name": "pollinations-dev-points",
+  "version": "1.0.0",
+  "description": "A web app to calculate Pollinations Dev Points based on a GitHub username.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "axios": "latest"
+  }
+}

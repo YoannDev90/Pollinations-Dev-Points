@@ -1,0 +1,19 @@
+{
+  "title": "เครื่องคิดเลข Depoint",
+  "inputPlaceholder": "ป้อนชื่อผู้ใช้ของ GitHub",
+  "calculateButton": "คํานวณ",
+  "userInfo": "ข้อมูลผู้ใช้ของ Github",
+  "username": "ชื่อผู้ใช้",
+  "accountCreated": "สร้างบัญชีผู้ใช้",
+  "publicRepos": "การตอบกลับสาธารณะ",
+  "followers": "ผู้ติดตาม",
+  "following": "ต่อไปนี้",
+  "totalCommits": "จํานวนสัญญาอนุญาตสิทธิ์ (90 วันหลัง)",
+  "totalStars": "จํานวนดาวทั้งหมด",
+  "devPoints": "จุด ดับ",
+  "accountAge": "ยุคของบัญชีผู้ใช้",
+  "publicCommits": "สัญญาสาธารณะ",
+  "originalRepos": "การตอบกลับดั้งเดิม",
+  "stars": "ดาว",
+  "error": "เกิดความผิดพลาดในการเรียก Dev Points กรุณาลองอีกครั้ง."
+}

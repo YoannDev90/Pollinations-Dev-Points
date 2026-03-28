@@ -1,0 +1,19 @@
+{
+  "title": "Pollinations देव अंक कैलकुलेटर",
+  "inputPlaceholder": "GitHub उपयोगकर्ता नाम दर्ज करें",
+  "calculateButton": "गणना",
+  "userInfo": "GitHub उपयोगकर्ता जानकारी",
+  "username": "उपयोगकर्ता नाम",
+  "accountCreated": "खाता बनाना",
+  "publicRepos": "सार्वजनिक प्रस्ताव",
+  "followers": "अनुयायी",
+  "following": "निम्नलिखित",
+  "totalCommits": "कुल Commits (पिछले 90 दिन)",
+  "totalStars": "कुल सितारे",
+  "devPoints": "देव अंक",
+  "accountAge": "खाता आयु",
+  "publicCommits": "सार्वजनिक समिति",
+  "originalRepos": "मूल प्रस्ताव",
+  "stars": "स्टार",
+  "error": "देव अंक प्राप्त करने में त्रुटि। फिर से प्रयास करें।."
+}

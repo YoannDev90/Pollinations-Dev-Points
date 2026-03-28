@@ -1,0 +1,19 @@
+{
+  "title": "Pollinations Dev Points Calculator",
+  "inputPlaceholder": "Introduzca GitHub nombre de usuario",
+  "calculateButton": "Cálculo",
+  "userInfo": "GitHub Información del usuario",
+  "username": "Nombre de usuario",
+  "accountCreated": "Cuenta creada",
+  "publicRepos": "Repuestos públicos",
+  "followers": "Seguidores",
+  "following": "Following",
+  "totalCommits": "Total Commits (últimos 90 días)",
+  "totalStars": "Total Stars",
+  "devPoints": "Puntos de desarrollo",
+  "accountAge": "Edad de la cuenta",
+  "publicCommits": "Compromisos públicos",
+  "originalRepos": "Original Repos",
+  "stars": "Estrellas",
+  "error": "Error buscando Puntos Dev. Por favor, inténtalo de nuevo."
+}

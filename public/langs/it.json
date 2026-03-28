@@ -1,0 +1,19 @@
+{
+  "title": "Calcolatore di punti Dev",
+  "inputPlaceholder": "Inserisci il nome utente GitHub",
+  "calculateButton": "Calcola",
+  "userInfo": "Informazioni sull'utente GitHub",
+  "username": "Nome utente",
+  "accountCreated": "Account Creato",
+  "publicRepos": "Reposito pubblico",
+  "followers": "Seguitori",
+  "following": "Seguito",
+  "totalCommits": "Totale impegni (ultimi 90 giorni)",
+  "totalStars": "Totale stelle",
+  "devPoints": "Punti Dev",
+  "accountAge": "Età del conto",
+  "publicCommits": "Impegni pubblici",
+  "originalRepos": "Reposs originale",
+  "stars": "Stelle",
+  "error": "Errore che cattura punti Dev. Per favore riprovate."
+}

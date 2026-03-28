@@ -1,0 +1,19 @@
+{
+  "title": "磁盘 Dev 点计算器",
+  "inputPlaceholder": "输入 GitHub 用户名",
+  "calculateButton": "计算",
+  "userInfo": "GitHub 用户信息",
+  "username": "用户名",
+  "accountCreated": "账户已创建",
+  "publicRepos": "公共还原",
+  "followers": "跟踪者",
+  "following": "跟踪",
+  "totalCommits": "共计(最近90天)",
+  "totalStars": "总星等",
+  "devPoints": "开发点",
+  "accountAge": "账户年龄",
+  "publicCommits": "公开提交",
+  "originalRepos": "原始还原",
+  "stars": "恒星数",
+  "error": "获取 Dev 点出错 。 请再试一次."
+}

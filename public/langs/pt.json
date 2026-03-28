@@ -1,0 +1,19 @@
+{
+  "title": "Calculadora de Pontos de Polinação Dev",
+  "inputPlaceholder": "Digite o nome de usuário GitHub",
+  "calculateButton": "Calcular",
+  "userInfo": "Informações do usuário do GitHub",
+  "username": "Utilizador",
+  "accountCreated": "Conta Criada",
+  "publicRepos": "Acordos de recompra públicos",
+  "followers": "Seguidores",
+  "following": "Seguir",
+  "totalCommits": "Total das autorizações (últimos 90 dias)",
+  "totalStars": "Total de Estrelas",
+  "devPoints": "Pontos Dev",
+  "accountAge": "Idade da Conta",
+  "publicCommits": "Compromissos Públicos",
+  "originalRepos": "Acordos de recompra originais",
+  "stars": "Estrelas",
+  "error": "Erro ao obter os Pontos Dev. Por favor, tente novamente."
+}

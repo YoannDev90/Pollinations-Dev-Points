@@ -1,0 +1,19 @@
+{
+  "title": "Pollinations Dev Point 계산기",
+  "inputPlaceholder": "GitHub 사용자",
+  "calculateButton": "계산",
+  "userInfo": "GitHub 사용자 정보",
+  "username": "사용자 이름",
+  "accountCreated": "계정 생성",
+  "publicRepos": "공공 저장소",
+  "followers": "더 보기",
+  "following": "이름 *",
+  "totalCommits": "총 Commits (마지막 90 일)",
+  "totalStars": "전체 별",
+  "devPoints": "Dev 포인트",
+  "accountAge": "계정 연령",
+  "publicCommits": "공공 Commits",
+  "originalRepos": "원본 저장소",
+  "stars": "이름 *",
+  "error": "오류 fetching Dev 포인트. 다시 시도하십시오."
+}

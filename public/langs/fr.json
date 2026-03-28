@@ -1,0 +1,19 @@
+{
+  "title": "Calculatrice des points Dev des pollinisations",
+  "inputPlaceholder": "Saisissez le nom d'utilisateur GitHub",
+  "calculateButton": "Calculer",
+  "userInfo": "Informations utilisateur GitHub",
+  "username": "Nom d'utilisateur",
+  "accountCreated": "Création du compte",
+  "publicRepos": "Repos public",
+  "followers": "Abonnés",
+  "following": "Suivant",
+  "totalCommits": "Total des navires (90 derniers jours)",
+  "totalStars": "Total des étoiles",
+  "devPoints": "Points Dev",
+  "accountAge": "Âge du compte",
+  "publicCommits": "Comites publics",
+  "originalRepos": "Repos original",
+  "stars": "Étoiles",
+  "error": "Erreur lors de la récupération des points Dev. Veuillez réessayer."
+}

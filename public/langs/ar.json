@@ -1,0 +1,19 @@
+{
+  "title": "Pollinations Dev Points Calculator",
+  "inputPlaceholder": "Enter GitHub username",
+  "calculateButton": "الحساب",
+  "userInfo": "GitHub User Info",
+  "username": "المستعمل",
+  "accountCreated": "الحساب المنشأ",
+  "publicRepos": "المصادر العامة",
+  "followers": "المتابعون",
+  "following": "يلي:",
+  "totalCommits": "مجموع البلاغات (90 يوماً)",
+  "totalStars": "مجموع النجوم",
+  "devPoints": "النقاط الشيطانية",
+  "accountAge": "حساب السن",
+  "publicCommits": "Public Commits",
+  "originalRepos": "الأصل",
+  "stars": "النجوم",
+  "error": "(الخطأ يجلب (ديف بوينتس أرجوك حاول مرة أخرى."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Калькулятор точек Dev Points",
+  "inputPlaceholder": "Введите имя пользователя GitHub",
+  "calculateButton": "Рассчитать",
+  "userInfo": "Пользовательская информация GitHub",
+  "username": "Имя пользователя",
+  "accountCreated": "Созданный аккаунт",
+  "publicRepos": "Публичные ответы",
+  "followers": "Последователи",
+  "following": "Следующий",
+  "totalCommits": "Общие обязательства (последние 90 дней)",
+  "totalStars": "Полные звезды",
+  "devPoints": "Дэв Поинтс",
+  "accountAge": "Возраст счета",
+  "publicCommits": "Общественные обязательства",
+  "originalRepos": "Оригинальный Repos",
+  "stars": "Звезды",
+  "error": "Ошибка в получении Dev Points. Пожалуйста, попробуйте еще раз."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Công cụ tính điểm phát triển trong Pollinations",
+  "inputPlaceholder": "Nhập tên người dùng GitHub",
+  "calculateButton": "Tính",
+  "userInfo": "Name",
+  "username": "Tên người dùng",
+  "accountCreated": "Tài khoản được tạo",
+  "publicRepos": "Công cộng",
+  "followers": "Theo dõi",
+  "following": "Theo",
+  "totalCommits": "Tổng cam kết ( 90 ngày qua)",
+  "totalStars": "Tổng các sao",
+  "devPoints": "Chấm",
+  "accountAge": "Tuổi khai trình",
+  "publicCommits": "Lời thề chung",
+  "originalRepos": "Gốc",
+  "stars": "Sao",
+  "error": "Lỗi lấy điểm Dev. Xin hãy thử lại."
+}

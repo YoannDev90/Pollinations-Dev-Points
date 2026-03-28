@@ -1,0 +1,19 @@
+{
+  "title": "Anketler Dev Puan Hesap Hesap Hesapları",
+  "inputPlaceholder": "GitHub kullanıcı adı girin",
+  "calculateButton": "Hesaplama",
+  "userInfo": "GitHub User Info",
+  "username": "Username",
+  "accountCreated": "Hesap Oluştur",
+  "publicRepos": "Public Repos",
+  "followers": "Takipçiler",
+  "following": "Takip",
+  "totalCommits": "Total Commits (son 90 gün)",
+  "totalStars": "Total Stars",
+  "devPoints": "Dev Points",
+  "accountAge": "Hesap Çağı",
+  "publicCommits": "Public Commits",
+  "originalRepos": "Orijinal Repos",
+  "stars": "Yıldızlar",
+  "error": "Hata Dev Noktaları getir. Lütfen tekrar deneyin."
+}

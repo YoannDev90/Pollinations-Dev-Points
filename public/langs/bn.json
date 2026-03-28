@@ -1,0 +1,19 @@
+{
+  "title": "সুবিধাযুক্ত দেব পয়েন্ট ক্যালকুলেটর",
+  "inputPlaceholder": "GHtহাব- এর নাম লিখুন",
+  "calculateButton": "গণনা করো",
+  "userInfo": "গিটহাব ব্যবহারকারী তথ্যName",
+  "username": "ব্যবহারকারীর নাম",
+  "accountCreated": "নতুন অ্যাকাউন্ট তৈরি করা হয়েছে",
+  "publicRepos": "পাবলিক লাইসেন্স",
+  "followers": "অনুসরণকারী",
+  "following": "অনুসরণ",
+  "totalCommits": "মোট মন্তব্য (শেষ ৯০ দিন)",
+  "totalStars": "মোট তারা",
+  "devPoints": "পয়েন্টস",
+  "accountAge": "অ্যাকাউন্ট সম্পাদনা",
+  "publicCommits": "সার্বজনীন মন্তব্য",
+  "originalRepos": "প্রকৃত ফলাফল",
+  "stars": "তারা",
+  "error": "D-Bus পয়েন্ট প্রাপ্ত করতে সমস্যা। অনুগ্রহ করে পুনরায় প্রচেষ্টা করুন।."
+}

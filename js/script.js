@@ -2,10 +2,39 @@ import { fetchGitHubData as fetchGitHubDataMock } from "./emulate.js";
 import { fetchGitHubData as fetchGitHubDataAPI } from "./calculate.js";
 import useTranslations from "./i18n.js";
 
+// Default configuration
+const defaultConfig = {
+  needed_dev_points: 7,
+  account_age_points_per_month: 0.5,
+  public_commits_points_per_commit: 0.1,
+  original_repos_points_per_repo: 0.5,
+  stars_points_per_star: 0.1,
+  max_account_age_points: 6,
+  max_public_commits_points: 3,
+  max_original_repos_points: 1,
+  max_stars_points: 5,
+};
+
+// Config will be loaded asynchronously
+let config = null;
+
+async function loadConfig() {
+  if (config) return config;
+  try {
+    const configResponse = await fetch("config.json");
+    config = await configResponse.json();
+    return config;
+  } catch (err) {
+    console.error("Failed to load config.json, using defaults:", err);
+    config = defaultConfig;
+    return config;
+  }
+}
+
 // Déterminer l'environnement à partir des paramètres d'URL
 const urlParams = new URLSearchParams(window.location.search);
 const env = urlParams.get("env") || "production";
-const isDevelopmentEnvironment = env === "development";
+const isDevelopmentEnvironment = env === "dev";
 
 const fetchGitHubData = isDevelopmentEnvironment
   ? fetchGitHubDataMock
@@ -99,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Language button event listeners initialized.");
 
   // Event listener for calculate button
-  calculateButton.addEventListener("click", () => {
+  calculateButton.addEventListener("click", async () => {
     console.log("Calculate button clicked");
     const username = usernameInput.value;
     if (!username) {
@@ -107,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     console.log(`Calculating dev points for username: ${username}`);
-    calculateDevPoints(username);
+    await calculateDevPoints(username);
   });
 
   console.log("Calculate button event listener initialized.");
@@ -196,8 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function calculateDevPoints(username) {
+async function calculateDevPoints(username) {
   console.log(`Starting calculation for: ${username}`);
+
+  // Load config first
+  const cfg = await loadConfig();
 
   const updateUI = (data) => {
     userInfo.avatar.src = data.userInfo.avatar_url;
@@ -212,12 +244,21 @@ function calculateDevPoints(username) {
     userInfo.commits.textContent = data.userInfo.totalCommits;
     userInfo.stars.textContent = data.userInfo.totalStars;
 
-    // Normalize progress bars based on max values:
-    // Account Age: 6, Public Commits: 3, Original Repos: 1, Stars: 5
-    progressBars.accountAge.style.width = `${(data.accountAge / 6) * 100}%`;
-    progressBars.publicCommits.style.width = `${(data.publicCommits / 3) * 100}%`;
-    progressBars.originalRepos.style.width = `${(data.originalRepos / 1) * 100}%`;
-    progressBars.stars.style.width = `${(data.stars / 5) * 100}%`;
+    // Normalize progress bars based on max values from config
+    const maxAccountAge =
+      cfg.max_account_age_points || defaultConfig.max_account_age_points;
+    const maxPublicCommits =
+      cfg.max_public_commits_points || defaultConfig.max_public_commits_points;
+    const maxOriginalRepos =
+      cfg.max_original_repos_points || defaultConfig.max_original_repos_points;
+    const maxStars = cfg.max_stars_points || defaultConfig.max_stars_points;
+    const neededPoints =
+      cfg.needed_dev_points || defaultConfig.needed_dev_points;
+
+    progressBars.accountAge.style.width = `${(data.accountAge / maxAccountAge) * 100}%`;
+    progressBars.publicCommits.style.width = `${(data.publicCommits / maxPublicCommits) * 100}%`;
+    progressBars.originalRepos.style.width = `${(data.originalRepos / maxOriginalRepos) * 100}%`;
+    progressBars.stars.style.width = `${(data.stars / maxStars) * 100}%`;
 
     // Calculate total score (sum of points)
     const totalPoints =
@@ -227,7 +268,12 @@ function calculateDevPoints(username) {
       totalPointsDisplay.textContent = totalPoints.toFixed(1);
     }
     if (progressBars.total) {
-      progressBars.total.style.width = `${(totalPoints / 7) * 100}%`;
+      // Progress bar shows progress toward the threshold of needed points
+      const progressPercentage = Math.min(
+        100,
+        (totalPoints / neededPoints) * 100,
+      );
+      progressBars.total.style.width = `${progressPercentage}%`;
     }
 
     // Ensure the results section is visible
@@ -237,28 +283,24 @@ function calculateDevPoints(username) {
     }
   };
 
-  if (isDevelopmentEnvironment) {
-    console.log(
-      "Development environment detected. Using hardcoded results from emulate.js.",
-    );
-    fetchGitHubData(username).then((hardcodedResult) => {
+  try {
+    if (isDevelopmentEnvironment) {
+      console.log(
+        "Development environment detected. Using hardcoded results from emulate.js.",
+      );
+      const hardcodedResult = await fetchGitHubData(username);
       console.log("Hardcoded Result:", hardcodedResult);
       updateUI(hardcodedResult);
-      return hardcodedResult;
-    });
-  } else {
-    console.log(
-      "Production environment detected. Fetching real data from GitHub.",
-    );
-    fetchGitHubData(username)
-      .then((data) => {
-        console.log("Fetched data:", data);
-        updateUI(data);
-        return data;
-      })
-      .catch((error) => {
-        console.error("Error fetching data from GitHub:", error);
-      });
+    } else {
+      console.log(
+        "Production environment detected. Fetching real data from GitHub.",
+      );
+      const data = await fetchGitHubData(username);
+      console.log("Fetched data:", data);
+      updateUI(data);
+    }
+  } catch (error) {
+    console.error("Error fetching data from GitHub:", error);
   }
 }
 

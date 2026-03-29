@@ -10,10 +10,17 @@
   "following": "Folgen",
   "totalCommits": "Gesamtverpflichtungen (letzte 90 Tage)",
   "totalStars": "Total Stars",
+  "visitProfile": "Profil besuchen",
   "devPoints": "Entscheidende Punkte",
   "accountAge": "Alter des Kontos",
   "publicCommits": "Öffentliche Mittel",
   "originalRepos": "Original Repos",
   "stars": "Sterne",
-  "error": "Fehler beim Start von Dev Points. Bitte versuchen Sie es noch mal."
+  "error": "Fehler beim Start von Dev Points. Bitte versuchen Sie es noch mal.",
+  "githubProfile": "GitHub Profil",
+  "commits": "Commits",
+  "accountAgeDescription": "Stellt das Alter des GitHub-Kontos in Monaten dar.",
+  "publicCommitsDescription": "Anzahl der Commits, die in den letzten 90 Tagen gemacht wurden.",
+  "originalReposDescription": "Anzahl der von dem Benutzer gehaltenen Original-Repositories.",
+  "starsDescription": "Gesamte Sterne, die über alle Repositories verteilt erhalten wurden."
 }

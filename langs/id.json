@@ -10,10 +10,17 @@
   "following": "Mengikuti",
   "totalCommits": "Total Komit (90 hari terakhir)",
   "totalStars": "Total Bintang",
+  "visitProfile": "Kunjungi Profil",
   "devPoints": "Titik Dev",
   "accountAge": "Jaman Akun",
   "publicCommits": "Public Commons",
   "originalRepos": "Repos Asli",
   "stars": "Bintang",
-  "error": "Kesalahan mengambil Dev Points. Tolong coba lagi."
+  "error": "Kesalahan mengambil Dev Points. Tolong coba lagi.",
+  "githubProfile": "Profil GitHub",
+  "commits": "Komit",
+  "accountAgeDescription": "Mewakili usia akun GitHub dalam bulan.",
+  "publicCommitsDescription": "Jumlah komit yang dilakukan dalam 90 hari terakhir.",
+  "originalReposDescription": "Jumlah repositori asli yang dimiliki oleh pengguna.",
+  "starsDescription": "Total bintang yang diterima di seluruh repositori."
 }

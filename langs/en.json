@@ -10,10 +10,19 @@
   "following": "Following",
   "totalCommits": "Total Commits (last 90 days)",
   "totalStars": "Total Stars",
+  "visitProfile": "Visit Profile",
   "devPoints": "Dev Points",
   "accountAge": "Account Age",
   "publicCommits": "Public Commits",
   "originalRepos": "Original Repos",
   "stars": "Stars",
-  "error": "Error fetching Dev Points. Please try again."
+  "error": "Error fetching Dev Points. Please try again.",
+  "subtitle": "Calculate your GitHub activity score in seconds!",
+  "githubProfile": "GitHub Profile",
+  "commits": "Commits",
+  "totalScore": "Total Score",
+  "accountAgeDescription": "Represents the age of the GitHub account in months.",
+  "publicCommitsDescription": "Number of commits made in the last 90 days.",
+  "originalReposDescription": "Number of original repositories owned by the user.",
+  "starsDescription": "Total stars received across all repositories."
 }

@@ -10,10 +10,17 @@
   "following": "Seguito",
   "totalCommits": "Totale impegni (ultimi 90 giorni)",
   "totalStars": "Totale stelle",
+  "visitProfile": "Visita Profilo",
   "devPoints": "Punti Dev",
   "accountAge": "Età del conto",
   "publicCommits": "Impegni pubblici",
   "originalRepos": "Reposs originale",
   "stars": "Stelle",
-  "error": "Errore che cattura punti Dev. Per favore riprovate."
+  "error": "Errore che cattura punti Dev. Per favore riprovate.",
+  "githubProfile": "Profilo GitHub",
+  "commits": "Commit",
+  "accountAgeDescription": "Rappresenta l'età dell'account GitHub in mesi.",
+  "publicCommitsDescription": "Numero di commit effettuati negli ultimi 90 giorni.",
+  "originalReposDescription": "Numero di repository originali di proprietà dell'utente.",
+  "starsDescription": "Totale stelle ricevute in tutti i repository."
 }

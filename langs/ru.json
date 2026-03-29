@@ -10,10 +10,17 @@
   "following": "Следующий",
   "totalCommits": "Общие обязательства (последние 90 дней)",
   "totalStars": "Полные звезды",
+  "visitProfile": "Посетить профиль",
   "devPoints": "Дэв Поинтс",
   "accountAge": "Возраст счета",
   "publicCommits": "Общественные обязательства",
   "originalRepos": "Оригинальный Repos",
   "stars": "Звезды",
-  "error": "Ошибка в получении Dev Points. Пожалуйста, попробуйте еще раз."
+  "error": "Ошибка в получении Dev Points. Пожалуйста, попробуйте еще раз.",
+  "githubProfile": "Профиль GitHub",
+  "commits": "Коммиты",
+  "accountAgeDescription": "Представляет возраст учетной записи GitHub в месяцах.",
+  "publicCommitsDescription": "Количество коммитов, сделанных за последние 90 дней.",
+  "originalReposDescription": "Количество оригинальных репозиториев, принадлежащих пользователю.",
+  "starsDescription": "Общее количество звезд, полученных по всем репозиториям."
 }

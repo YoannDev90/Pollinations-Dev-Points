@@ -59,62 +59,118 @@
             </div>
         </section>
 
-        <section class="user-info">
-            <div>
-                <h2><i class="fas fa-user icon" aria-hidden="true"></i> User Information</h2>
-                <div id="user-info" class="card">
-                    <div class="user-details">
+        <div id="results" style="display: none;">
+            <section class="user-info">
+                <h2 id="label-user-info"><i class="fas fa-user icon" aria-hidden="true"></i> User Information</h2>
+                <div id="user-info" class="card user-card">
+                    <div class="user-header">
                         <img id="avatar" src="" alt="User Avatar" class="avatar">
-                        <div>
-                            <p><strong>Username:</strong> <span id="user-login"></span></p>
-                            <p><strong>Account Created:</strong> <span id="user-created"></span></p>
-                            <p><strong>Followers:</strong> <span id="user-followers"></span></p>
-                            <p><strong>Following:</strong> <span id="user-following"></span></p>
+                        <div class="user-title">
+                            <h3 id="user-login"></h3>
+                            <a id="user-profile" href="" target="_blank" class="profile-link">
+                                <i class="fab fa-github"></i> <span id="label-visit-profile">Visit Profile</span>
+                            </a>
                         </div>
-                        <div>
-                            <p><strong>GitHub Profile:</strong> <a id="user-profile" href="" target="_blank">Visit
-                                    Profile</a></p>
-                            <p><strong>Public Repos:</strong> <span id="user-repos"></span></p>
-                            <p><strong>Commits:</strong> <span id="user-commits"></span></p>
-                            <p><strong>Stars:</strong> <span id="user-stars"></span></p>
-
+                    </div>
+                    <div class="user-stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="stat-content">
+                                <strong id="label-account-created">Account Created</strong>
+                                <span id="user-created"></span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-content">
+                                <strong id="label-followers">Followers</strong>
+                                <span id="user-followers"></span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-friends"></i>
+                            <div class="stat-content">
+                                <strong id="label-following">Following</strong>
+                                <span id="user-following"></span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-code-branch"></i>
+                            <div class="stat-content">
+                                <strong id="label-public-repos">Public Repos</strong>
+                                <span id="user-repos"></span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-history"></i>
+                            <div class="stat-content">
+                                <strong id="label-commits">Commits</strong>
+                                <span id="user-commits"></span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-content">
+                                <strong id="label-stars">Stars</strong>
+                                <span id="user-stars"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="dev-points">
-            <div>
-                <h2><i class="fas fa-code icon" aria-hidden="true"></i> Dev Points</h2>
+            <section class="dev-points">
+                <h2 id="label-dev-points"><i class="fas fa-code icon" aria-hidden="true"></i> Dev Points</h2>
                 <div id="progress-bars" class="card">
+                    <div class="total-score-section">
+                        <div class="total-score-header">
+                            <strong id="label-total-score">Total Score</strong>
+                            <span class="score-value"><span id="total-points">0</span> / 7</span>
+                        </div>
+                        <div class="progress-bar total-progress">
+                            <div id="total-score-bar" class="progress-bar-inner"></div>
+                        </div>
+                    </div>
+                    <hr class="divider">
                     <div class="progress-section">
-                        <p><strong>Account Age</strong>: Represents the age of the GitHub account in months.</p>
+                        <div class="progress-header">
+                            <strong id="label-account-age">Account Age</strong>
+                            <span id="desc-account-age">Represents the age of the GitHub account in months.</span>
+                        </div>
                         <div class="progress-bar">
                             <div id="account-age-bar" class="progress-bar-inner"></div>
                         </div>
                     </div>
                     <div class="progress-section">
-                        <p><strong>Public Commits</strong>: Number of commits made in the last 90 days.</p>
+                        <div class="progress-header">
+                            <strong id="label-public-commits">Public Commits</strong>
+                            <span id="desc-public-commits">Number of commits made in the last 90 days.</span>
+                        </div>
                         <div class="progress-bar">
                             <div id="public-commits-bar" class="progress-bar-inner"></div>
                         </div>
                     </div>
                     <div class="progress-section">
-                        <p><strong>Original Repos</strong>: Number of original repositories owned by the user.</p>
+                        <div class="progress-header">
+                            <strong id="label-original-repos">Original Repos</strong>
+                            <span id="desc-original-repos">Number of original repositories owned by the user.</span>
+                        </div>
                         <div class="progress-bar">
                             <div id="original-repos-bar" class="progress-bar-inner"></div>
                         </div>
                     </div>
-                    <div>
-                        <p><strong>Stars</strong>: Total stars received across all repositories.</p>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <strong id="label-stars-bar">Stars</strong>
+                            <span id="desc-stars">Total stars received across all repositories.</span>
+                        </div>
                         <div class="progress-bar">
                             <div id="stars-bar" class="progress-bar-inner"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
     <script type="module" src="js/script.js"></script>

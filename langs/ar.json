@@ -10,10 +10,17 @@
   "following": "يلي:",
   "totalCommits": "مجموع البلاغات (90 يوماً)",
   "totalStars": "مجموع النجوم",
+  "visitProfile": "زيارة الملف الشخصي",
   "devPoints": "النقاط الشيطانية",
   "accountAge": "حساب السن",
   "publicCommits": "Public Commits",
   "originalRepos": "الأصل",
   "stars": "النجوم",
-  "error": "(الخطأ يجلب (ديف بوينتس أرجوك حاول مرة أخرى."
+  "error": "(الخطأ يجلب (ديف بوينتس أرجوك حاول مرة أخرى.",
+  "githubProfile": "الملف الشخصي لـ GitHub",
+  "commits": "الالتزامات",
+  "accountAgeDescription": "يمثل عمر حساب GitHub بالأشهر.",
+  "publicCommitsDescription": "عدد الالتزامات التي تم إجراؤها في آخر 90 يومًا.",
+  "originalReposDescription": "عدد المستودعات الأصلية التي يملكها المستخدم.",
+  "starsDescription": "إجمالي النجوم التي تم الحصول عليها عبر جميع المستودعات."
 }

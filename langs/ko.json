@@ -10,10 +10,17 @@
   "following": "이름 *",
   "totalCommits": "총 Commits (마지막 90 일)",
   "totalStars": "전체 별",
+  "visitProfile": "프로필 방문",
   "devPoints": "Dev 포인트",
   "accountAge": "계정 연령",
   "publicCommits": "공공 Commits",
   "originalRepos": "원본 저장소",
   "stars": "이름 *",
-  "error": "오류 fetching Dev 포인트. 다시 시도하십시오."
+  "error": "오류 fetching Dev 포인트. 다시 시도하십시오.",
+  "githubProfile": "GitHub 프로필",
+  "commits": "커밋",
+  "accountAgeDescription": "GitHub 계정의 나이를 달 단위로 나타냅니다.",
+  "publicCommitsDescription": "최근 90일 동안 이루어진 커밋 수입니다.",
+  "originalReposDescription": "사용자가 소유한 원본 저장소의 수입니다.",
+  "starsDescription": "모든 저장소에서 받은 총 별 개수입니다."
 }

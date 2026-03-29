@@ -10,10 +10,17 @@
   "following": "お問い合わせ",
   "totalCommits": "株式総数(90日前)",
   "totalStars": "総合星",
+  "visitProfile": "プロフィールを見る",
   "devPoints": "Dev ポイント",
   "accountAge": "口座年齢",
   "publicCommits": "パブリックコミット",
   "originalRepos": "オリジナルレポス",
   "stars": "スターズ",
-  "error": "Devポイントの取得エラー お問い合わせ."
+  "error": "Devポイントの取得エラー お問い合わせ.",
+  "githubProfile": "GitHub プロフィール",
+  "commits": "コミット",
+  "accountAgeDescription": "GitHub アカウントの年齢（ヶ月単位）を示します。",
+  "publicCommitsDescription": "過去90日間に行われたコミット数です。",
+  "originalReposDescription": "ユーザーが所有するオリジナルリポジトリの数です。",
+  "starsDescription": "すべてのリポジトリで獲得された合計スター数です。"
 }

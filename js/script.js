@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener for language buttons
   languageButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const selectedLanguage = event.target.getAttribute("data-lang");
+    button.addEventListener("click", () => {
+      const selectedLanguage = button.getAttribute("data-lang");
       console.log(`Language button clicked: ${selectedLanguage}`);
       // Reload the page with the selected language as a query parameter
       const url = new URL(window.location);
@@ -67,7 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("autofillFieldData is null or undefined.");
   }
 
-  const language = navigator.language.split("-")[0] || "en";
+  const language =
+    urlParams.get("lang") || navigator.language.split("-")[0] || "en";
+
   useTranslations(language).then(({ translations, error }) => {
     if (error) {
       console.error("Error loading translations:", error);
@@ -84,6 +86,44 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("title").textContent = translations.title;
     usernameInput.placeholder = translations.inputPlaceholder;
     calculateButton.textContent = translations.calculateButton;
+
+    // Translate labels
+    document.querySelector("#label-user-info").innerHTML =
+      `<i class="fas fa-user icon" aria-hidden="true"></i> ${translations.userInfo}`;
+    document.querySelector("#label-account-created").textContent =
+      translations.accountCreated;
+    document.querySelector("#label-followers").textContent =
+      translations.followers;
+    document.querySelector("#label-following").textContent =
+      translations.following;
+    document.querySelector("#label-public-repos").textContent =
+      translations.publicRepos;
+    document.querySelector("#label-commits").textContent =
+      translations.totalCommits;
+    document.querySelector("#label-stars").textContent = translations.stars;
+    document.querySelector("#label-visit-profile").textContent =
+      translations.visitProfile;
+    document.querySelector("#label-total-score").textContent =
+      translations.totalScore;
+    document.querySelector("#label-dev-points").innerHTML =
+      `<i class="fas fa-code icon" aria-hidden="true"></i> ${translations.devPoints}`;
+    document.querySelector("#label-account-age").textContent =
+      translations.accountAge;
+    document.querySelector("#label-public-commits").textContent =
+      translations.publicCommits;
+    document.querySelector("#label-original-repos").textContent =
+      translations.originalRepos;
+    document.querySelector("#label-stars-bar").textContent = translations.stars;
+
+    // Update descriptions
+    document.querySelector("#desc-account-age").textContent =
+      translations.accountAgeDescription;
+    document.querySelector("#desc-public-commits").textContent =
+      translations.publicCommitsDescription;
+    document.querySelector("#desc-original-repos").textContent =
+      translations.originalReposDescription;
+    document.querySelector("#desc-stars").textContent =
+      translations.starsDescription;
   });
 
   // Ensure stylesheets are fully loaded before proceeding
@@ -109,11 +149,26 @@ function calculateDevPoints(username) {
     userInfo.followers.textContent = data.userInfo.followers;
     userInfo.following.textContent = data.userInfo.following;
     userInfo.profile.href = data.userInfo.html_url;
+    userInfo.commits.textContent = data.userInfo.totalCommits;
+    userInfo.stars.textContent = data.userInfo.totalStars;
 
-    progressBars.accountAge.style.width = `${data.accountAge * 20}%`;
-    progressBars.publicCommits.style.width = `${data.publicCommits * 20}%`;
-    progressBars.originalRepos.style.width = `${data.originalRepos * 20}%`;
-    progressBars.stars.style.width = `${data.stars * 20}%`;
+    // Normalize progress bars based on max values:
+    // Account Age: 6, Public Commits: 3, Original Repos: 1, Stars: 5
+    progressBars.accountAge.style.width = `${(data.accountAge / 6) * 100}%`;
+    progressBars.publicCommits.style.width = `${(data.publicCommits / 3) * 100}%`;
+    progressBars.originalRepos.style.width = `${(data.originalRepos / 1) * 100}%`;
+    progressBars.stars.style.width = `${(data.stars / 5) * 100}%`;
+
+    // Calculate total score (sum of points)
+    const totalPoints =
+      data.accountAge + data.publicCommits + data.originalRepos + data.stars;
+    const totalPointsDisplay = document.querySelector("#total-points");
+    if (totalPointsDisplay) {
+      totalPointsDisplay.textContent = totalPoints.toFixed(1);
+    }
+    if (progressBars.total) {
+      progressBars.total.style.width = `${(totalPoints / 7) * 100}%`;
+    }
 
     // Ensure the results section is visible
     const resultsSection = document.querySelector("#results");
@@ -155,6 +210,8 @@ const userInfo = {
   followers: document.querySelector("#user-followers"),
   following: document.querySelector("#user-following"),
   profile: document.querySelector("#user-profile"),
+  commits: document.querySelector("#user-commits"),
+  stars: document.querySelector("#user-stars"),
 };
 
 const progressBars = {
@@ -162,4 +219,5 @@ const progressBars = {
   publicCommits: document.querySelector("#public-commits-bar"),
   originalRepos: document.querySelector("#original-repos-bar"),
   stars: document.querySelector("#stars-bar"),
+  total: document.querySelector("#total-score-bar"),
 };

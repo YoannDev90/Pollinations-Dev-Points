@@ -4,7 +4,7 @@ const useTranslations = async (language) => {
 
   try {
     console.log(`Fetching translations for language: ${language}`);
-    const response = await fetch(`/langs/${language}.json`);
+    const response = await fetch(`langs/${language}.json`);
     if (!response.ok) {
       throw new Error(`Failed to fetch translations for ${language}`);
     }

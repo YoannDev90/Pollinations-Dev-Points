@@ -10,10 +10,17 @@
   "following": "پیرو",
   "totalCommits": "کُل 90 دن",
   "totalStars": "مکمل ستارے",
+  "visitProfile": "پروفائل دیکھیں",
   "devPoints": "دیوی پوائنٹ",
   "accountAge": "اکاؤنٹ عمر",
   "publicCommits": "عوامی کھیل",
   "originalRepos": "ابتدائی ردِعمل",
   "stars": "ستارے",
-  "error": "Dev Points اپ لوڈ کرنے میں غلطی. براہ مہربانی دوبارہ کوشش کریں."
+  "error": "Dev Points اپ لوڈ کرنے میں غلطی. براہ مہربانی دوبارہ کوشش کریں.",
+  "githubProfile": "GitHub پروفائل",
+  "commits": "کام",
+  "accountAgeDescription": "GitHub اکاؤنٹ کی عمر کو ماہوں میں ظاہر کرتا ہے۔",
+  "publicCommitsDescription": "آخری 90 دنوں میں کیے گئے کام کی تعداد۔",
+  "originalReposDescription": "صارف کے مالکیت میں اصل ریپوزٹریز کی تعداد۔",
+  "starsDescription": "تمام ریپوزٹریز سے حاصل کردہ کل ستارے۔"
 }

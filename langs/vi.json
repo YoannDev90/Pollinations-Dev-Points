@@ -10,10 +10,17 @@
   "following": "Theo",
   "totalCommits": "Tổng cam kết ( 90 ngày qua)",
   "totalStars": "Tổng các sao",
+  "visitProfile": "Xem hồ sơ",
   "devPoints": "Chấm",
   "accountAge": "Tuổi khai trình",
   "publicCommits": "Lời thề chung",
   "originalRepos": "Gốc",
   "stars": "Sao",
-  "error": "Lỗi lấy điểm Dev. Xin hãy thử lại."
+  "error": "Lỗi lấy điểm Dev. Xin hãy thử lại.",
+  "githubProfile": "Hồ sơ GitHub",
+  "commits": "Cam kết",
+  "accountAgeDescription": "Đại diện cho độ tuổi của tài khoản GitHub tính bằng tháng.",
+  "publicCommitsDescription": "Số lượng cam kết đã thực hiện trong 90 ngày qua.",
+  "originalReposDescription": "Số lượng kho lưu trữ gốc thuộc sở hữu của người dùng.",
+  "starsDescription": "Tổng số sao nhận được trên tất cả các kho lưu trữ."
 }

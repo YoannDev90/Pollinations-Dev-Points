@@ -10,10 +10,17 @@
   "following": "ต่อไปนี้",
   "totalCommits": "จํานวนสัญญาอนุญาตสิทธิ์ (90 วันหลัง)",
   "totalStars": "จํานวนดาวทั้งหมด",
+  "visitProfile": "ดูโปรไฟล์",
   "devPoints": "จุด ดับ",
   "accountAge": "ยุคของบัญชีผู้ใช้",
   "publicCommits": "สัญญาสาธารณะ",
   "originalRepos": "การตอบกลับดั้งเดิม",
   "stars": "ดาว",
-  "error": "เกิดความผิดพลาดในการเรียก Dev Points กรุณาลองอีกครั้ง."
+  "error": "เกิดความผิดพลาดในการเรียก Dev Points กรุณาลองอีกครั้ง.",
+  "githubProfile": "โปรไฟล์ GitHub",
+  "commits": "การส่ง",
+  "accountAgeDescription": "แสดงอายุของบัญชี GitHub เป็นเดือน",
+  "publicCommitsDescription": "จำนวนการส่งที่ทำในช่วง 90 วันที่ผ่านมา",
+  "originalReposDescription": "จำนวนคลังเก็บข้อมูลต้นฉบับที่เป็นเจ้าของโดยผู้ใช้",
+  "starsDescription": "ดาวทั้งหมดที่ได้รับจากคลังเก็บข้อมูลทั้งหมด"
 }

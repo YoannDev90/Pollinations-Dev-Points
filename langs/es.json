@@ -10,10 +10,17 @@
   "following": "Following",
   "totalCommits": "Total Commits (últimos 90 días)",
   "totalStars": "Total Stars",
+  "visitProfile": "Visitar perfil",
   "devPoints": "Puntos de desarrollo",
   "accountAge": "Edad de la cuenta",
   "publicCommits": "Compromisos públicos",
   "originalRepos": "Original Repos",
   "stars": "Estrellas",
-  "error": "Error buscando Puntos Dev. Por favor, inténtalo de nuevo."
+  "error": "Error buscando Puntos Dev. Por favor, inténtalo de nuevo.",
+  "githubProfile": "Perfil de GitHub",
+  "commits": "Commits",
+  "accountAgeDescription": "Representa la edad de la cuenta de GitHub en meses.",
+  "publicCommitsDescription": "Número de commits realizados en los últimos 90 días.",
+  "originalReposDescription": "Número de repositorios originales propiedad del usuario.",
+  "starsDescription": "Total de estrellas recibidas en todos los repositorios."
 }

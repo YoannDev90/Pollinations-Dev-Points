@@ -26,13 +26,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener for language buttons
   languageButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const selectedLanguage = button.getAttribute("data-lang");
       console.log(`Language button clicked: ${selectedLanguage}`);
-      // Reload the page with the selected language as a query parameter
+
+      // Load new translations without page refresh
+      const { translations, error } = await useTranslations(selectedLanguage);
+
+      if (error) {
+        console.error("Error loading translations:", error);
+        return;
+      }
+
+      if (!translations) {
+        console.error(
+          "Translations object is undefined. Check the i18n module.",
+        );
+        return;
+      }
+
+      // Update all translated elements
+      document.querySelector("title").textContent = translations.title;
+      usernameInput.placeholder = translations.inputPlaceholder;
+      calculateButton.textContent = translations.calculateButton;
+
+      // Translate labels
+      document.querySelector("#label-user-info").innerHTML =
+        `<i class="fas fa-user icon" aria-hidden="true"></i> ${translations.userInfo}`;
+      document.querySelector("#label-account-created").textContent =
+        translations.accountCreated;
+      document.querySelector("#label-followers").textContent =
+        translations.followers;
+      document.querySelector("#label-following").textContent =
+        translations.following;
+      document.querySelector("#label-public-repos").textContent =
+        translations.publicRepos;
+      document.querySelector("#label-commits").textContent =
+        translations.totalCommits;
+      document.querySelector("#label-stars").textContent = translations.stars;
+      document.querySelector("#label-visit-profile").textContent =
+        translations.visitProfile;
+      document.querySelector("#label-total-score").textContent =
+        translations.totalScore;
+      document.querySelector("#label-dev-points").innerHTML =
+        `<i class="fas fa-code icon" aria-hidden="true"></i> ${translations.devPoints}`;
+      document.querySelector("#label-account-age").textContent =
+        translations.accountAge;
+      document.querySelector("#label-public-commits").textContent =
+        translations.publicCommits;
+      document.querySelector("#label-original-repos").textContent =
+        translations.originalRepos;
+      document.querySelector("#label-stars-bar").textContent =
+        translations.stars;
+
+      // Update descriptions
+      document.querySelector("#desc-account-age").textContent =
+        translations.accountAgeDescription;
+      document.querySelector("#desc-public-commits").textContent =
+        translations.publicCommitsDescription;
+      document.querySelector("#desc-original-repos").textContent =
+        translations.originalReposDescription;
+      document.querySelector("#desc-stars").textContent =
+        translations.starsDescription;
+
+      // Update the URL without page refresh
       const url = new URL(window.location);
       url.searchParams.set("lang", selectedLanguage);
-      window.location.href = url;
+      window.history.pushState({}, "", url);
     });
   });
 

@@ -1,8 +1,8 @@
 /* General layout */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    background-color: #121212; /* Darker background for better contrast */
+    color: #E0E0E0; /* Lighter text for readability */
     margin: 0;
     padding: 0;
 }
@@ -35,17 +35,17 @@ body {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #238636;
-    color: white;
+    background-color: #388E3C; /* High contrast green */
+    color: #FFFFFF;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin: 5px;
 }
 
 button:hover {
-    background-color: #2ea043;
+    background-color: #4CAF50; /* Slightly lighter green */
     transform: scale(1.05);
 }
 
@@ -60,6 +60,50 @@ input {
     color: #c9d1d9;
     width: calc(100% - 150px);
     box-sizing: border-box;
+}
+
+/* Corrected alignments */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Increased spacing for better alignment */
+    margin: 30px auto; /* Center the group horizontally */
+}
+
+.input-group input[type="text"] {
+    flex: 1; /* Ensure input takes up available space */
+    padding: 10px; /* Adjust padding for better alignment */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group button {
+    padding: 10px 20px; /* Adjust button size for better alignment */
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-group button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Adjust the width of the GitHub username input bar */
+input[type="text"] {
+    width: 100%; /* Match the width of the container */
+    max-width: 600px; /* Adjust this value to match the max width of the first row of language buttons */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure block-level element for centering */
 }
 
 /* Cards */
@@ -140,6 +184,16 @@ input {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Add hover effects for flags */
+.flag {
+    transition: transform 0.2s ease;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 /* Results section */
 .results {
     margin-top: 40px;
@@ -152,4 +206,64 @@ input {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* Add modern and readable typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Add spacing between sections */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+/* Add styles for icons */
+.icon {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Example for User Information and Dev Points sections */
+.user-info, .dev-points {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info .icon, .dev-points .icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 0.5rem;
+    }
+
+    .user-info, .dev-points {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
 }

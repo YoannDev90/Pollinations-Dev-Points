@@ -7,6 +7,12 @@
     <title>Dev Points Calculator</title>
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+        href="https://raw.githubusercontent.com/pollinations/pollinations/0f1bfe012aeb919f1caa7c498c8fb4cab95c3b4f/assets/logo.svg">
 </head>
 
 <body class="bg-dark text-light">
@@ -53,47 +59,58 @@
             </div>
         </section>
 
-        <section id="results" class="results" style="display: none;">
-            <h2 class="text-center">User Information</h2>
-            <div id="user-info" class="card">
-                <div class="user-details">
-                    <img id="avatar" src="" alt="User Avatar" class="avatar">
-                    <div>
-                        <p><strong>Username:</strong> <span id="user-login"></span></p>
-                        <p><strong>Account Created:</strong> <span id="user-created"></span></p>
-                        <p><strong>Public Repos:</strong> <span id="user-repos"></span></p>
-                        <p><strong>Followers:</strong> <span id="user-followers"></span></p>
-                        <p><strong>Following:</strong> <span id="user-following"></span></p>
-                        <p><strong>GitHub Profile:</strong> <a id="user-profile" href="" target="_blank">Visit
-                                Profile</a></p>
+        <section class="user-info">
+            <div>
+                <h2><i class="fas fa-user icon" aria-hidden="true"></i> User Information</h2>
+                <div id="user-info" class="card">
+                    <div class="user-details">
+                        <img id="avatar" src="" alt="User Avatar" class="avatar">
+                        <div>
+                            <p><strong>Username:</strong> <span id="user-login"></span></p>
+                            <p><strong>Account Created:</strong> <span id="user-created"></span></p>
+                            <p><strong>Followers:</strong> <span id="user-followers"></span></p>
+                            <p><strong>Following:</strong> <span id="user-following"></span></p>
+                        </div>
+                        <div>
+                            <p><strong>GitHub Profile:</strong> <a id="user-profile" href="" target="_blank">Visit
+                                    Profile</a></p>
+                            <p><strong>Public Repos:</strong> <span id="user-repos"></span></p>
+                            <p><strong>Commits:</strong> <span id="user-commits"></span></p>
+                            <p><strong>Stars:</strong> <span id="user-stars"></span></p>
+
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <h2 class="text-center">Dev Points</h2>
-            <div id="progress-bars" class="card">
-                <div class="progress-section">
-                    <p><strong>Account Age</strong>: Represents the age of the GitHub account in months.</p>
-                    <div class="progress-bar">
-                        <div id="account-age-bar" class="progress-bar-inner"></div>
+        <section class="dev-points">
+            <div>
+                <h2><i class="fas fa-code icon" aria-hidden="true"></i> Dev Points</h2>
+                <div id="progress-bars" class="card">
+                    <div class="progress-section">
+                        <p><strong>Account Age</strong>: Represents the age of the GitHub account in months.</p>
+                        <div class="progress-bar">
+                            <div id="account-age-bar" class="progress-bar-inner"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="progress-section">
-                    <p><strong>Public Commits</strong>: Number of commits made in the last 90 days.</p>
-                    <div class="progress-bar">
-                        <div id="public-commits-bar" class="progress-bar-inner"></div>
+                    <div class="progress-section">
+                        <p><strong>Public Commits</strong>: Number of commits made in the last 90 days.</p>
+                        <div class="progress-bar">
+                            <div id="public-commits-bar" class="progress-bar-inner"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="progress-section">
-                    <p><strong>Original Repos</strong>: Number of original repositories owned by the user.</p>
-                    <div class="progress-bar">
-                        <div id="original-repos-bar" class="progress-bar-inner"></div>
+                    <div class="progress-section">
+                        <p><strong>Original Repos</strong>: Number of original repositories owned by the user.</p>
+                        <div class="progress-bar">
+                            <div id="original-repos-bar" class="progress-bar-inner"></div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <p><strong>Stars</strong>: Total stars received across all repositories.</p>
-                    <div class="progress-bar">
-                        <div id="stars-bar" class="progress-bar-inner"></div>
+                    <div>
+                        <p><strong>Stars</strong>: Total stars received across all repositories.</p>
+                        <div class="progress-bar">
+                            <div id="stars-bar" class="progress-bar-inner"></div>
+                        </div>
                     </div>
                 </div>
             </div>

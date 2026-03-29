@@ -28,7 +28,7 @@ fi
 # Read and translate each key-value pair
 for LANG in "${LANGUAGES[@]}"; do
   echo "Translating to $LANG..."
-  OUTPUT_FILE="public/langs/$LANG.json"
+  OUTPUT_FILE="langs/$LANG.json"
   echo "{" > "$OUTPUT_FILE"
 
   # Extract each key-value pair

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Points Calculator</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container">
+        <header class="header text-center">
+            <img src="https://raw.githubusercontent.com/pollinations/pollinations/0f1bfe012aeb919f1caa7c498c8fb4cab95c3b4f/assets/logo-text-white.svg"
+                alt="Pollinations Logo" class="header-logo" width="30%">
+            <h1 class="main-title">Dev Points Calculator</h1>
+            <p class="subtitle">Calculate your GitHub activity score in seconds!</p>
+        </header>
+
+        <section class="language-section text-center">
+            <div class="language-buttons">
+                <div class="language-row">
+                    <button class="btn" data-lang="en" title="English"><span class="fi fi-gb"></span></button>
+                    <button class="btn" data-lang="fr" title="Français"><span class="fi fi-fr"></span></button>
+                    <button class="btn" data-lang="es" title="Español"><span class="fi fi-es"></span></button>
+                    <button class="btn" data-lang="de" title="Deutsch"><span class="fi fi-de"></span></button>
+                    <button class="btn" data-lang="zh" title="中文"><span class="fi fi-cn"></span></button>
+                    <button class="btn" data-lang="ja" title="日本語"><span class="fi fi-jp"></span></button>
+                    <button class="btn" data-lang="ru" title="Русский"><span class="fi fi-ru"></span></button>
+                    <button class="btn" data-lang="ar" title="العربية"><span class="fi fi-sa"></span></button>
+                    <button class="btn" data-lang="hi" title="हिंदी"><span class="fi fi-in"></span></button>
+                    <button class="btn" data-lang="pt" title="Português"><span class="fi fi-pt"></span></button>
+                </div>
+                <div class="language-row">
+                    <button class="btn" data-lang="it" title="Italiano"><span class="fi fi-it"></span></button>
+                    <button class="btn" data-lang="ko" title="한국어"><span class="fi fi-kr"></span></button>
+                    <button class="btn" data-lang="vi" title="Tiếng Việt"><span class="fi fi-vn"></span></button>
+                    <button class="btn" data-lang="bn" title="বাংলা"><span class="fi fi-bd"></span></button>
+                    <button class="btn" data-lang="sw" title="Kiswahili"><span class="fi fi-ke"></span></button>
+                    <button class="btn" data-lang="th" title="ไทย"><span class="fi fi-th"></span></button>
+                    <button class="btn" data-lang="tr" title="Türkçe"><span class="fi fi-tr"></span></button>
+                    <button class="btn" data-lang="ur" title="اردو"><span class="fi fi-pk"></span></button>
+                    <button class="btn" data-lang="id" title="Bahasa Indonesia"><span class="fi fi-id"></span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="input-section text-center">
+            <div class="input-group">
+                <input id="username" type="text" class="form-control" placeholder="Enter GitHub username">
+                <button id="calculate-button" class="btn">Calculate</button>
+            </div>
+        </section>
+
+        <section id="results" class="results" style="display: none;">
+            <h2 class="text-center">User Information</h2>
+            <div id="user-info" class="card">
+                <div class="user-details">
+                    <img id="avatar" src="" alt="User Avatar" class="avatar">
+                    <div>
+                        <p><strong>Username:</strong> <span id="user-login"></span></p>
+                        <p><strong>Account Created:</strong> <span id="user-created"></span></p>
+                        <p><strong>Public Repos:</strong> <span id="user-repos"></span></p>
+                        <p><strong>Followers:</strong> <span id="user-followers"></span></p>
+                        <p><strong>Following:</strong> <span id="user-following"></span></p>
+                        <p><strong>GitHub Profile:</strong> <a id="user-profile" href="" target="_blank">Visit
+                                Profile</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center">Dev Points</h2>
+            <div id="progress-bars" class="card">
+                <div class="progress-section">
+                    <p><strong>Account Age</strong>: Represents the age of the GitHub account in months.</p>
+                    <div class="progress-bar">
+                        <div id="account-age-bar" class="progress-bar-inner"></div>
+                    </div>
+                </div>
+                <div class="progress-section">
+                    <p><strong>Public Commits</strong>: Number of commits made in the last 90 days.</p>
+                    <div class="progress-bar">
+                        <div id="public-commits-bar" class="progress-bar-inner"></div>
+                    </div>
+                </div>
+                <div class="progress-section">
+                    <p><strong>Original Repos</strong>: Number of original repositories owned by the user.</p>
+                    <div class="progress-bar">
+                        <div id="original-repos-bar" class="progress-bar-inner"></div>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Stars</strong>: Total stars received across all repositories.</p>
+                    <div class="progress-bar">
+                        <div id="stars-bar" class="progress-bar-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

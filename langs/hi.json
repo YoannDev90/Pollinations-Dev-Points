@@ -17,10 +17,16 @@
   "originalRepos": "मूल प्रस्ताव",
   "stars": "स्टार",
   "error": "देव अंक प्राप्त करने में त्रुटि। फिर से प्रयास करें।.",
+  "subtitle": "सेकंड में अपने गिटहब गतिविधि स्कोर की गणना करें!",
   "githubProfile": "GitHub प्रोफ़ाइल",
-  "commits": "कमिट",
-  "accountAgeDescription": "GitHub खाते की आयु को महीनों में दर्शाता है।",
-  "publicCommitsDescription": "पिछले 90 दिनों में किए गए कमिट की संख्या।",
-  "originalReposDescription": "उपयोगकर्ता द्वारा स्वामित्व में मूल रिपॉजिटरी की संख्या।",
-  "starsDescription": "सभी रिपॉजिटरी में प्राप्त कुल स्टार।"
+  "commits": "Commit",
+  "totalScore": "कुल स्कोर",
+  "accountAgeDescription": "महीनों में गिटहब खाते की उम्र का प्रतिनिधित्व करता है।.",
+  "publicCommitsDescription": "पिछले 90 दिनों में किए गए प्रतिबद्धताओं की संख्या।.",
+  "originalReposDescription": "उपयोगकर्ता के स्वामित्व वाले मूल प्रस्तावों की संख्या।.",
+  "starsDescription": "सभी प्रस्तावों में कुल तारे प्राप्त हुए।.",
+  "accountAgeUnit": "महीना",
+  "publicCommitsUnit": "प्रतिबद्धता",
+  "originalReposUnit": "प्रस्ताव",
+  "starsUnit": "सितारों"
 }

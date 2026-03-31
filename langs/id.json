@@ -17,10 +17,16 @@
   "originalRepos": "Repos Asli",
   "stars": "Bintang",
   "error": "Kesalahan mengambil Dev Points. Tolong coba lagi.",
+  "subtitle": "Hitung skor aktivitas GitHub dalam hitungan detik!",
   "githubProfile": "Profil GitHub",
-  "commits": "Komit",
-  "accountAgeDescription": "Mewakili usia akun GitHub dalam bulan.",
-  "publicCommitsDescription": "Jumlah komit yang dilakukan dalam 90 hari terakhir.",
+  "commits": "Mulai",
+  "totalScore": "Nilai Total",
+  "accountAgeDescription": "Mewakili usia akun GitHub dalam beberapa bulan.",
+  "publicCommitsDescription": "Jumlah yang dilakukan dalam 90 hari terakhir.",
   "originalReposDescription": "Jumlah repositori asli yang dimiliki oleh pengguna.",
-  "starsDescription": "Total bintang yang diterima di seluruh repositori."
+  "starsDescription": "Total bintang diterima di seluruh repositori.",
+  "accountAgeUnit": "bulan",
+  "publicCommitsUnit": "lakukan",
+  "originalReposUnit": "repos",
+  "starsUnit": "bintang"
 }

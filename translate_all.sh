@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # This script translates a given English JSON file into all supported languages using LibreTranslate.
+libretranslate
 
 # Check if LibreTranslate is running
 if ! curl -s http://localhost:5000/health | grep -q "ok"; then
@@ -17,7 +18,7 @@ LANGUAGES=(
 )
 
 # Path to the English JSON file
-EN_FILE="public/langs/en.json"
+EN_FILE="langs/en.json"
 
 # Check if the file exists
 if [ ! -f "$EN_FILE" ]; then

@@ -353,6 +353,13 @@ body {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+.progress-details {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #9ec9ff;
+}
+
 .progress-bar-inner {
     height: 100%;
     background: linear-gradient(90deg, #58a6ff, #bc85ff);

@@ -17,10 +17,16 @@
   "originalRepos": "Оригинальный Repos",
   "stars": "Звезды",
   "error": "Ошибка в получении Dev Points. Пожалуйста, попробуйте еще раз.",
+  "subtitle": "Вычислите показатель активности GitHub за секунды!",
   "githubProfile": "Профиль GitHub",
-  "commits": "Коммиты",
-  "accountAgeDescription": "Представляет возраст учетной записи GitHub в месяцах.",
-  "publicCommitsDescription": "Количество коммитов, сделанных за последние 90 дней.",
+  "commits": "Обязуется",
+  "totalScore": "Всего баллов",
+  "accountAgeDescription": "Возраст аккаунта GitHub в месяцах.",
+  "publicCommitsDescription": "Количество совершенных за последние 90 дней.",
   "originalReposDescription": "Количество оригинальных репозиториев, принадлежащих пользователю.",
-  "starsDescription": "Общее количество звезд, полученных по всем репозиториям."
+  "starsDescription": "Всего звезд получили во всех хранилищах.",
+  "accountAgeUnit": "месяцы",
+  "publicCommitsUnit": "совершать",
+  "originalReposUnit": "реплика",
+  "starsUnit": "звезды"
 }

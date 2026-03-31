@@ -24,5 +24,9 @@
   "accountAgeDescription": "Represents the age of the GitHub account in months.",
   "publicCommitsDescription": "Number of commits made in the last 90 days.",
   "originalReposDescription": "Number of original repositories owned by the user.",
-  "starsDescription": "Total stars received across all repositories."
+  "starsDescription": "Total stars received across all repositories.",
+  "accountAgeUnit": "months",
+  "publicCommitsUnit": "commits",
+  "originalReposUnit": "repos",
+  "starsUnit": "stars"
 }

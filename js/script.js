@@ -17,6 +17,7 @@ const defaultConfig = {
 
 // Config will be loaded asynchronously
 let config = null;
+let currentTranslations = null;
 
 async function loadConfig() {
   if (config) return config;
@@ -213,6 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
       translations.originalReposDescription;
     document.querySelector("#desc-stars").textContent =
       translations.starsDescription;
+
+    currentTranslations = translations;
   });
 
   // Ensure stylesheets are fully loaded before proceeding
@@ -259,6 +262,50 @@ async function calculateDevPoints(username) {
     progressBars.publicCommits.style.width = `${(data.publicCommits / maxPublicCommits) * 100}%`;
     progressBars.originalRepos.style.width = `${(data.originalRepos / maxOriginalRepos) * 100}%`;
     progressBars.stars.style.width = `${(data.stars / maxStars) * 100}%`;
+
+    const accountAgePerMonth =
+      cfg.account_age_points_per_month ||
+      defaultConfig.account_age_points_per_month;
+    const publicCommitsPerCommit =
+      cfg.public_commits_points_per_commit ||
+      defaultConfig.public_commits_points_per_commit;
+    const originalReposPerRepo =
+      cfg.original_repos_points_per_repo ||
+      defaultConfig.original_repos_points_per_repo;
+    const starsPerStar =
+      cfg.stars_points_per_star || defaultConfig.stars_points_per_star;
+
+    const accountAgeDetail = document.querySelector("#account-age-detail");
+    const publicCommitsDetail = document.querySelector(
+      "#public-commits-detail",
+    );
+    const originalReposDetail = document.querySelector(
+      "#original-repos-detail",
+    );
+    const starsDetail = document.querySelector("#stars-detail");
+
+    const accountAgeUnit =
+      (currentTranslations && currentTranslations.accountAgeUnit) || "mo";
+    const publicCommitsUnit =
+      (currentTranslations && currentTranslations.publicCommitsUnit) ||
+      "commits";
+    const originalReposUnit =
+      (currentTranslations && currentTranslations.originalReposUnit) || "repos";
+    const starsUnit =
+      (currentTranslations && currentTranslations.starsUnit) || "stars";
+
+    if (accountAgeDetail) {
+      accountAgeDetail.textContent = `${accountAgePerMonth} × ${data.accountAgeMonths} ${accountAgeUnit} = ${data.accountAge.toFixed(1)} pts`;
+    }
+    if (publicCommitsDetail) {
+      publicCommitsDetail.textContent = `${publicCommitsPerCommit} × ${data.userInfo.totalCommits} ${publicCommitsUnit} = ${data.publicCommits.toFixed(1)} pts`;
+    }
+    if (originalReposDetail) {
+      originalReposDetail.textContent = `${originalReposPerRepo} × ${data.originalReposCount} ${originalReposUnit} = ${data.originalRepos.toFixed(1)} pts`;
+    }
+    if (starsDetail) {
+      starsDetail.textContent = `${starsPerStar} × ${data.userInfo.totalStars} ${starsUnit} = ${data.stars.toFixed(1)} pts`;
+    }
 
     // Calculate total score (sum of points)
     const totalPoints =

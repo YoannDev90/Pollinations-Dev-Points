@@ -17,10 +17,16 @@
   "originalRepos": "オリジナルレポス",
   "stars": "スターズ",
   "error": "Devポイントの取得エラー お問い合わせ.",
+  "subtitle": "GitHubアクティビティのスコアを秒単位で計算!",
   "githubProfile": "GitHub プロフィール",
   "commits": "コミット",
-  "accountAgeDescription": "GitHub アカウントの年齢（ヶ月単位）を示します。",
-  "publicCommitsDescription": "過去90日間に行われたコミット数です。",
-  "originalReposDescription": "ユーザーが所有するオリジナルリポジトリの数です。",
-  "starsDescription": "すべてのリポジトリで獲得された合計スター数です。"
+  "totalScore": "総合スコア",
+  "accountAgeDescription": "GitHubアカウントの年齢を月単位で表します.",
+  "publicCommitsDescription": "過去90日間のコミット数.",
+  "originalReposDescription": "利用者が所有する元のリポジトリの数.",
+  "starsDescription": "すべてのリポジトリで受けた合計星.",
+  "accountAgeUnit": "月 日",
+  "publicCommitsUnit": "コミット",
+  "originalReposUnit": "リポスト",
+  "starsUnit": "クチコミ"
 }

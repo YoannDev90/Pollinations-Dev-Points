@@ -44,13 +44,14 @@ export async function fetchGitHubData(username) {
       page += 1;
     }
 
-    const accountAge = Math.min(
-      6,
+    const accountAgeMonths = Math.max(
+      0,
       Math.floor(
         (Date.now() - new Date(userData.created_at)) /
           (1000 * 60 * 60 * 24 * 30),
-      ) * 0.5,
+      ),
     );
+    const accountAge = Math.min(6, accountAgeMonths * 0.5);
 
     const ninetyDaysAgo = new Date();
     ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
@@ -83,9 +84,14 @@ export async function fetchGitHubData(username) {
     const publicCommits = Math.min(3, totalCommitsLast90Days * 0.1);
 
     const validOriginalRepos = reposData.filter(
-      (repo) => !repo.fork && repo.size > 0,
+      (repo) =>
+        !repo.fork &&
+        repo.size > 0 &&
+        repo.owner &&
+        repo.owner.login.toLowerCase() === username.toLowerCase(),
     );
-    const originalRepos = Math.min(1, validOriginalRepos.length * 0.5);
+    const originalReposCount = validOriginalRepos.length;
+    const originalRepos = Math.min(1, originalReposCount * 0.5);
     const totalStars = validOriginalRepos.reduce(
       (sum, repo) => sum + repo.stargazers_count,
       0,
@@ -96,8 +102,10 @@ export async function fetchGitHubData(username) {
 
     return {
       accountAge,
+      accountAgeMonths,
       publicCommits,
       originalRepos,
+      originalReposCount,
       stars,
       total,
       userInfo: {

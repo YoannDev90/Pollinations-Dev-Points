@@ -9,6 +9,10 @@ This project calculates Pollinations Dev Points based on GitHub usernames. It us
 - Dark theme for better user experience.
 - Global and individual progress bars for detailed scoring.
 
+## Screenshots
+
+![alt text](screenshots/image.png)
+
 ## Installation
 
 1. Clone the repository:

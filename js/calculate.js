@@ -28,13 +28,21 @@ export async function fetchGitHubData(username) {
     }
     const userData = await userResponse.json();
 
-    const reposResponse = await fetch(
-      `${GITHUB_API_BASE_URL}/users/${username}/repos`,
-    );
-    if (!reposResponse.ok) {
-      throw new Error("Failed to fetch repositories");
+    // Fetch repositories with pagination and 100 per page to avoid silent 30-item cap.
+    let reposData = [];
+    let page = 1;
+    while (true) {
+      const reposResponse = await fetch(
+        `${GITHUB_API_BASE_URL}/users/${username}/repos?per_page=100&page=${page}`,
+      );
+      if (!reposResponse.ok) {
+        throw new Error("Failed to fetch repositories");
+      }
+      const pageRepos = await reposResponse.json();
+      reposData = reposData.concat(pageRepos);
+      if (pageRepos.length < 100) break;
+      page += 1;
     }
-    const reposData = await reposResponse.json();
 
     const accountAge = Math.min(
       6,
@@ -47,50 +55,42 @@ export async function fetchGitHubData(username) {
     const ninetyDaysAgo = new Date();
     ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
 
+    // Use search API for commits across all public repos and contributions.
     let totalCommitsLast90Days = 0;
-
-    const commitPromises = reposData.map(async (repo) => {
-      if (!repo.fork) {
-        try {
-          const commitsResponse = await fetch(
-            `${GITHUB_API_BASE_URL}/repos/${username}/${repo.name}/commits?since=${ninetyDaysAgo.toISOString()}`,
-          );
-          if (!commitsResponse.ok) {
-            throw new Error(`Failed to fetch commits for repo ${repo.name}`);
-          }
-          const commitsData = await commitsResponse.json();
-          return commitsData.length;
-        } catch (err) {
-          console.error(
-            `Failed to fetch commits for repo ${repo.name}: ${err.message}`,
-          );
-          return 0;
-        }
+    try {
+      const commitsSearchResponse = await fetch(
+        `${GITHUB_API_BASE_URL}/search/commits?q=author:${encodeURIComponent(
+          username,
+        )}+committer-date:>${ninetyDaysAgo.toISOString()}&per_page=1`,
+        {
+          headers: {
+            Accept: "application/vnd.github.cloak-preview",
+          },
+        },
+      );
+      if (!commitsSearchResponse.ok) {
+        throw new Error(
+          `Failed to fetch commit search results: ${commitsSearchResponse.status}`,
+        );
       }
-      return 0;
-    });
-
-    const commitResults = await Promise.all(commitPromises);
-    totalCommitsLast90Days = commitResults.reduce(
-      (sum, count) => sum + count,
-      0,
-    );
+      const commitsSearchData = await commitsSearchResponse.json();
+      totalCommitsLast90Days = commitsSearchData.total_count || 0;
+    } catch (err) {
+      console.error(`Failed to fetch commit search API: ${err.message}`);
+      totalCommitsLast90Days = 0;
+    }
 
     const publicCommits = Math.min(3, totalCommitsLast90Days * 0.1);
 
-    const originalRepos = Math.min(
-      1,
-      reposData.filter((repo) => !repo.fork).length * 0.5,
+    const validOriginalRepos = reposData.filter(
+      (repo) => !repo.fork && repo.size > 0,
     );
-    const stars = Math.min(
-      5,
-      reposData.reduce((sum, repo) => sum + repo.stargazers_count, 0) * 0.1,
-    );
-
-    const totalStars = reposData.reduce(
+    const originalRepos = Math.min(1, validOriginalRepos.length * 0.5);
+    const totalStars = validOriginalRepos.reduce(
       (sum, repo) => sum + repo.stargazers_count,
       0,
     );
+    const stars = Math.min(5, totalStars * 0.1);
 
     const total = accountAge + publicCommits + originalRepos + stars;
 

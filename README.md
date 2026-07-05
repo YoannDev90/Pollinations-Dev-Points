@@ -1,5 +1,8 @@
 # Pollinations Seed Tier Dev Points
 
+> [!IMPORTANT]
+> Pollinations no longer uses the tier system, and therefore no longer uses devpoints either. The project is therefore on hold for a while; maybe I'll delete it someday.
+
 This project calculates Pollinations Dev Points based on GitHub usernames. It uses the GitHub API to fetch user data and displays the results in a modern web interface.
 
 ## Features
